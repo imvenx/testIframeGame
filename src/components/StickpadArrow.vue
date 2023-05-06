@@ -2,10 +2,11 @@
     <g v-on="touchEvents" :style="`transform:translate(${x}%, ${y}%)`">
 
         <circle id="outerCircle" r="20%" />
-        <image style="transform:translate(-80px, -80px);" width="160px" height="160px" href="src/assets/sword.svg" />
+        <!-- <image style="transform:translate(-80px, -80px);" width="160px" height="160px" href="../assets/sword.svg" /> -->
 
         <!-- <circle ref="cursor" r="10%" fill="brown" :cx="cursorX - startX" :cy="cursorY - startY" /> -->
 
+        <Sword />
 
     </g>
 </template>
@@ -13,6 +14,7 @@
 <script lang="ts" setup>
 import { socket } from "src/modules/global";
 import { onMounted, ref } from "vue";
+import Sword from "./gameComponents/Sword.vue";
 
 const cursor = ref<HTMLElement>()
 

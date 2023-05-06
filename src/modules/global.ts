@@ -1,2 +1,5 @@
 import { type Socket, io } from 'socket.io-client'
-export const socket: Socket = io("192.168.1.140:3000")
+
+const socketAddress = location.protocol + '//' + location.hostname + ':3000'
+
+export const socket: Socket = io(socketAddress)
