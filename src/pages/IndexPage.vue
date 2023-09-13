@@ -52,6 +52,7 @@
       </g>
 
 
+
       <g style="transform:translate(10%, 20%)">
         <circle r="1400" cx="2000" cy="250" fill="green" stroke="black" />
         <circle r="300" cx="300" cy="250" fill="green" stroke="black" />
@@ -64,6 +65,11 @@
           <circle r="70" cx="300" cy="370" id="house" />
           <circle r="40" cx="300" cy="370" id="house" />
           <circle r="10" cx="300" cy="370" id="house" />
+        </g>
+
+
+        <g style="transform: translate(250px);">
+          <WaterComp />
         </g>
       </g>
 
@@ -95,6 +101,7 @@
 import { socket } from 'src/modules/global';
 import { onMounted, ref } from 'vue';
 import Sword from '../components/gameComponents/Sword.vue'
+import WaterComp from 'src/components/WaterComp.vue';
 
 const controllerCoords = { x: 0, y: 0 }
 const playerPos = ref({ x: 100, y: 120 })
